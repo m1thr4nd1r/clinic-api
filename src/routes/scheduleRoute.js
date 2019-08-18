@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/calendarController')
+const controller = require('../controllers/scheduleController')
 
 router.post('/', controller.post);
 router.put('/:id', controller.put);
