@@ -31,9 +31,16 @@ exports.post = (req, res, next) => {
     }
 };
 
-exports.put = (req, res, next) => {
-    let id = req.params.id;
-    res.status(201).send(`Requisição recebida com sucesso! ${id}`);
+exports.get = (req, res, next) => {
+    let schedules = db.get('schedules');
+    let dev = req.params.dev
+
+    if (dev != "dev")
+        schedules = schedules.forEach(schedule => {
+            delete schedule.id;
+        }).value();
+
+    res.status(201).send(schedules);
 };
 
 exports.delete = (req, res, next) => {
