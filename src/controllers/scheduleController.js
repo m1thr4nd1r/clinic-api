@@ -25,7 +25,10 @@ exports.post = (req, res, next) => {
         res.status(201).send(`Agendamento ${id} criada com sucesso!`);
     }
     else
+    {
+        console.log(req.body)
         res.status(400).send("Tipo incorreto de agendamento.")
+    }
 };
 
 exports.put = (req, res, next) => {
