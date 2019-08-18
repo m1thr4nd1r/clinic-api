@@ -5,11 +5,13 @@
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0",
+    "shortid": "^2.2.14"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon ./bin/server.js",
+    "start": "nodemon --ignore 'db/' ./bin/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
