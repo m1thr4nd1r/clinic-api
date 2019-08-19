@@ -40,7 +40,7 @@ exports.get = (req, res, next) => {
             delete schedule.id;
         }).value();
 
-    res.status(201).send(schedules);
+    res.status(200).send(schedules);
 };
 
 function stringToDate(string)
@@ -92,7 +92,7 @@ exports.check = (req, res, next) => {
     }
 
     if (response.length > 0)
-        res.status(201).send(response);
+        res.status(200).send(response);
     else
         res.status(400).send("No vacant space found on schedule.");
 }

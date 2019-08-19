@@ -9,9 +9,14 @@
     "lowdb": "^1.0.0",
     "shortid": "^2.2.14"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "nodemon": "^1.19.1",
+    "request": "^2.88.0",
+    "should": "^13.2.3"
+  },
   "scripts": {
-    "start": "nodemon --ignore 'db/' ./bin/server.js",
+    "start": "nodemon --ignore 'db/' --ignore 'test/' ./bin/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
