@@ -42,7 +42,11 @@ describe("Test Clinic API",function(){
           }
 
           expect(response.statusCode).to.equal(200);
-          expect(_body.length).to.least(0);
+
+          if (_body.length > 0)
+            expect(_body.length).to.least(0);
+          else
+            expect(body).contain('vacant');
 
           done(); 
         }
