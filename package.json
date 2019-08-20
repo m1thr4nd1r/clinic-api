@@ -10,6 +10,7 @@
     "shortid": "^2.2.14"
   },
   "devDependencies": {
+    "mocha": "^6.2.0",
     "chai": "^4.2.0",
     "nodemon": "^1.19.1",
     "request": "^2.88.0",
