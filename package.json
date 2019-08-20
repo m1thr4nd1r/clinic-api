@@ -19,7 +19,7 @@
   "scripts": {
     "start": "node ./bin/server.js",
     "dev": "nodemon --ignore 'db/' --ignore 'test/' ./bin/server.js",
-    "test": "mocka"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "",
