@@ -7,8 +7,6 @@ router.post('/', controller.post);
 
 // Check free space based on schedules
 router.get('/check/:start/:end', controller.check);
-// List schedules with id
-router.get('/:dev', controller.get);
 // List schedules
 router.get('/', controller.get);
 

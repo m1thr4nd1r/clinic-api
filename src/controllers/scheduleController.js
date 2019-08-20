@@ -33,9 +33,9 @@ exports.post = (req, res, next) => {
 
 exports.get = (req, res, next) => {
     let schedules = db.get('schedules');
-    let dev = req.params.dev
+    let dev = req.query.dev
 
-    if (dev != "dev")
+    if (dev == true)
         schedules = schedules.forEach(schedule => {
             delete schedule.id;
         }).value();
