@@ -94,7 +94,7 @@ exports.check = (req, res, next) => {
     if (response.length > 0)
         res.status(200).send(response);
     else
-        res.status(400).send("No vacant space found on schedule.");
+        res.status(200).send("No vacant space found on schedule.");
 }
 
 exports.delete = (req, res, next) => {
