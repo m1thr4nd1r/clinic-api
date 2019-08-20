@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "df8aab81-2994-4a8c-bd40-142bb2c93257",
+		"name": "clinicAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Weekly Schedule",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"weekly\",\n  \"days\": [\n    \"seg\",\n    \"qua\"\n  ],\n  \"intervals\": [\n    {\"start\": \"14:00\", \"end\": \"14:30\"}\n  ]\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/schedule/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"schedule",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Daily Schedule",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"daily\",\n  \"intervals\": [\n    {\"start\": \"14:00\", \"end\": \"14:30\"}\n  ]\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/schedule/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"schedule",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Day Schedule",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"day\",\n  \"days\": \"25-06-2020\",\n  \"intervals\": [\n    {\"start\": \"14:00\", \"end\": \"14:30\"}\n  ]\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/schedule/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"schedule",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Schedule",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/schedule/q8cUldVja",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"schedule",
+						"q8cUldVja"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Schedules",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/schedule/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"schedule",
+						""
+					],
+					"query": [
+						{
+							"key": "dev",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Schedules",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/schedule/check/25-01-2018/29-01-2018",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"schedule",
+						"check",
+						"25-01-2018",
+						"29-01-2018"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
