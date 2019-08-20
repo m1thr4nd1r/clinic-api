@@ -34,11 +34,18 @@ exports.post = (req, res, next) => {
 exports.get = (req, res, next) => {
     let schedules = db.get('schedules');
     let dev = req.query.dev
+    console.log(dev)
 
     if (dev != 'true')
-        schedules = schedules.forEach(schedule => {
+    {
+        let devSchedules = schedules.cloneDeep();      
+        
+        devSchedules = devSchedules.forEach(schedule => {
             delete schedule.id;
         }).value();
+
+        schedules = devSchedules;
+    }
 
     res.status(200).send(schedules);
 };
